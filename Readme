@@ -1,1 +1,16 @@
 # Learn Micro Services along with DDD
+
+This repository is for learning micro services along with DDD.  Please do not use it in production.
+
+## Pre-requisites
+- dotnet cli
+- git
+- docker
+- sql server
+
+## Setup SQL Server
+Setup the sql server locally using docker image.  Please run the below from your local machine.
+
+```bash
+docker run -d --name sql_server_test -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=reallyStrongPwd123' -p 1433:1433 mcr.microsoft.com/mssql/server:2019-latest
+```
