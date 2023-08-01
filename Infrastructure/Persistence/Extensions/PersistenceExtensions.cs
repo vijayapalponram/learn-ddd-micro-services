@@ -12,7 +12,7 @@ namespace Persistence.Extensions
         public static void AddPersistenceContext(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<RepositoryDBContext>(
-                options => options.UseSqlServer("Server=localhost,1433;Initial Catalog=Shopping;User ID=sa;Password=reallyStrongPwd123;Integrated Security=true;",
+                options => options.UseSqlServer("Data Source=localhost,1433;Initial Catalog=Shopping;User ID=sa;Password=reallyStrongPwd123;Integrated Security=false;Trust Server Certificate=false;Encrypt=false",
                 b => b.MigrationsAssembly(typeof(RepositoryDBContext).Assembly.FullName)));
 
             services.AddScoped<IRepositoryDBContext, RepositoryDBContext>();

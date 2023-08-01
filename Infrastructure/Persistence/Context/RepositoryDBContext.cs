@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 namespace Persistence.Context
 {
     public class RepositoryDBContext: DbContext, IRepositoryDBContext {
+
+        public RepositoryDBContext(){
+
+        }
         public RepositoryDBContext(DbContextOptions<RepositoryDBContext> options): base(options) {
 
         }
